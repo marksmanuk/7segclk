@@ -41,12 +41,12 @@ Usage: 7segclk [options]
 
 The default display modes are:
 
-...
+```
 -c 0   High resolution time: hh.mm.ss.ms
 -c 1   Normal resolution time: hh.mm.ss
 -d 0   Date in format: yyyy.mm.dd (ISO style)
 -d 1   Date in format: dd-mm-yy (UK style)  
-...
+```
 
 The default is to display the time in high resolution format.
 If the push buttons are fitted, they are used to increase or decrease the display intensity during run time.
@@ -57,7 +57,7 @@ The program displays the current system date and time.  Ideally the Pi will be N
 
 I am running the NTP replacement daemon chrony (chronyd) synced to a local time server.
 
-...
+```
 $ chronyc tracking
 Reference ID    : 3F82F8A4 (time.xxxx.xx.xx)
 Stratum         : 2
@@ -72,7 +72,7 @@ Root delay      : 0.063919 seconds
 Root dispersion : 0.029787 seconds
 Update interval : 5178.6 seconds
 Leap status     : Normal
-...
+```
 
 The MAX7219 can be driven pretty hard and can easily update at 1/100th second.
 
@@ -85,14 +85,14 @@ The MAX7219 can be driven pretty hard and can easily update at 1/100th second.
 
 The code assumes the following IO pins are used for the display:
 
-...
+```
 DIN    Data In      Pin 19    GPIO10 (MOSI)
 CS     Chip Select  Pin 24    GPIO8 (PI CE0)
 CLK    Clock        Pin 23    GPIO11 (SPI CLK)
 
 SW1    Left Button  Pin 11    GPIO17
 SW2    Right Button Pin 37    GPIO26
-...
+```
 
 ## Authors
 
